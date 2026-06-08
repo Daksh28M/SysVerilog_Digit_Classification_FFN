@@ -23,7 +23,7 @@
 module neuron #(parameter IN_SIZE = 196, WIDTH = 8)(
     input clk,
     input en,
-    input rst,
+    input reset,
     input signed [2*WIDTH-1:0] in_data [1:IN_SIZE-1],
     input signed [WIDTH-1:0] weight [1:IN_SIZE-1],
     input signed [WIDTH-1:0] bias,
@@ -59,5 +59,5 @@ module neuron #(parameter IN_SIZE = 196, WIDTH = 8)(
 
     assign neuron_out = out + bias;
     assign neuron_done = done;
-    
+
 endmodule
