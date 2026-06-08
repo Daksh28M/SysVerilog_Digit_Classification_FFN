@@ -24,8 +24,8 @@ module neuron #(parameter IN_SIZE = 196, WIDTH = 8)(
     input clk,
     input en,
     input reset,
-    input signed [2*WIDTH-1:0] in_data [1:IN_SIZE-1],
-    input signed [WIDTH-1:0] weight [1:IN_SIZE-1],
+    input signed [2*WIDTH-1:0] in_data [0:IN_SIZE-1],
+    input signed [WIDTH-1:0] weight [0:IN_SIZE-1],
     input signed [WIDTH-1:0] bias,
     output signed [4*WIDTH-1:0] neuron_out,
     output neuron_done
@@ -35,7 +35,7 @@ module neuron #(parameter IN_SIZE = 196, WIDTH = 8)(
     reg done = 0;
 
     wire signed [4*WIDTH-1:0] product_w;
-    reg signed [4*WIDHT-1:0] out;
+    reg signed [4*WIDTH-1:0] out;
 
     assign product_w = in_data[addr] * weight[addr];
 
