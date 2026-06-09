@@ -1,0 +1,466 @@
+
+*** Running vivado
+    with args -log neural_net_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neural_net_top.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Tue Jun  9 15:06:59 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source neural_net_top.tcl -notrace
+Command: synth_design -top neural_net_top -part xczu5eg-sfvc784-1-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu5eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu5eg'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 35588
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1104.742 ; gain = 537.535
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'neural_net_top' [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/neural_net_top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'avg_pooling_layer' [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/avg_pooling_layer.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'avg_pooling' [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/avg_pooling.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'avg_pooling' (0#1) [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/avg_pooling.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'avg_pooling_layer' (0#1) [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/avg_pooling_layer.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'dense_layer1' [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/dense_layer1.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'relu' [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/relu.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'relu' (0#1) [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/relu.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'dense_layer' [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/dense_layer.sv:23]
+	Parameter NEURON_NB bound to: 32 - type: integer 
+	Parameter IN_SIZE bound to: 196 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'neuron' [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/neuron.sv:23]
+	Parameter IN_SIZE bound to: 196 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron' (0#1) [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/neuron.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'dense_layer' (0#1) [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/dense_layer.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'dense_layer1' (0#1) [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/dense_layer1.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'dense_layer2' [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/dense_layer2.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'dense_layer__parameterized0' [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/dense_layer.sv:23]
+	Parameter NEURON_NB bound to: 10 - type: integer 
+	Parameter IN_SIZE bound to: 32 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'neuron__parameterized0' [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/neuron.sv:23]
+	Parameter IN_SIZE bound to: 32 - type: integer 
+	Parameter WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'neuron__parameterized0' (0#1) [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/neuron.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'dense_layer__parameterized0' (0#1) [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/dense_layer.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'dense_layer2' (0#1) [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/dense_layer2.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'select_max' [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/select_max.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'select_max' (0#1) [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/select_max.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'neural_net_top' (0#1) [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/neural_net_top.sv:23]
+WARNING: [Synth 8-6014] Unused sequential element max_val_reg was removed.  [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/select_max.sv:38]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1336.910 ; gain = 769.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1336.910 ; gain = 769.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu5eg-sfvc784-1-e
+INFO: [Device 21-403] Loading part xczu5eg-sfvc784-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1336.910 ; gain = 769.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:11 . Memory (MB): peak = 2097.348 ; gain = 1530.141
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 42    
+	   4 Input   16 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 8     
++---Registers : 
+	               32 Bit    Registers := 42    
+	               16 Bit    Registers := 204   
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 50    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 84    
+	   2 Input   16 Bit        Muxes := 11    
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 43    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 1248 (col length:96)
+BRAMs: 288 (col length: RAMB18 96 RAMB36 48)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'pool_out_reg' and it is trimmed from '16' to '8' bits. [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sources_1/new/avg_pooling.sv:39]
+DSP Report: Generating DSP out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register out_reg is absorbed into DSP out_reg.
+DSP Report: operator out0 is absorbed into DSP out_reg.
+DSP Report: operator product_w is absorbed into DSP out_reg.
+DSP Report: Generating DSP out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register out_reg is absorbed into DSP out_reg.
+DSP Report: operator out0 is absorbed into DSP out_reg.
+DSP Report: operator product_w is absorbed into DSP out_reg.
+DSP Report: Generating DSP out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register out_reg is absorbed into DSP out_reg.
+DSP Report: operator out0 is absorbed into DSP out_reg.
+DSP Report: operator product_w is absorbed into DSP out_reg.
+DSP Report: Generating DSP out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register out_reg is absorbed into DSP out_reg.
+DSP Report: operator out0 is absorbed into DSP out_reg.
+DSP Report: operator product_w is absorbed into DSP out_reg.
+DSP Report: Generating DSP out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register out_reg is absorbed into DSP out_reg.
+DSP Report: operator out0 is absorbed into DSP out_reg.
+DSP Report: operator product_w is absorbed into DSP out_reg.
+DSP Report: Generating DSP out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register out_reg is absorbed into DSP out_reg.
+DSP Report: operator out0 is absorbed into DSP out_reg.
+DSP Report: operator product_w is absorbed into DSP out_reg.
+DSP Report: Generating DSP out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register out_reg is absorbed into DSP out_reg.
+DSP Report: operator out0 is absorbed into DSP out_reg.
+DSP Report: operator product_w is absorbed into DSP out_reg.
+DSP Report: Generating DSP out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register out_reg is absorbed into DSP out_reg.
+DSP Report: operator out0 is absorbed into DSP out_reg.
+DSP Report: operator product_w is absorbed into DSP out_reg.
+DSP Report: Generating DSP out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register out_reg is absorbed into DSP out_reg.
+DSP Report: operator out0 is absorbed into DSP out_reg.
+DSP Report: operator product_w is absorbed into DSP out_reg.
+DSP Report: Generating DSP out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register out_reg is absorbed into DSP out_reg.
+DSP Report: operator out0 is absorbed into DSP out_reg.
+DSP Report: operator product_w is absorbed into DSP out_reg.
+DSP Report: Generating DSP out_reg, operation Mode is: (P+A*B)'.
+DSP Report: register out_reg is absorbed into DSP out_reg.
+DSP Report: operator out0 is absorbed into DSP out_reg.
+DSP Report: operator product_w is absorbed into DSP out_reg.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:45 ; elapsed = 00:03:07 . Memory (MB): peak = 2609.254 ; gain = 2042.047
+---------------------------------------------------------------------------------
+ Sort Area is neuron out_reg_0 : 0 0 : 953 953 : Used 32 time 0
+ Sort Area is neural_net_top__GCB1 out_reg_2 : 0 0 : 953 953 : Used 1 time 0
+ Sort Area is neural_net_top__GCB1 out_reg_3 : 0 0 : 953 953 : Used 1 time 0
+ Sort Area is neural_net_top__GCB1 out_reg_4 : 0 0 : 953 953 : Used 1 time 0
+ Sort Area is neural_net_top__GCB1 out_reg_5 : 0 0 : 953 953 : Used 1 time 0
+ Sort Area is neural_net_top__GCB1 out_reg_6 : 0 0 : 953 953 : Used 1 time 0
+ Sort Area is neural_net_top__GCB1 out_reg_7 : 0 0 : 953 953 : Used 1 time 0
+ Sort Area is neural_net_top__GCB1 out_reg_8 : 0 0 : 953 953 : Used 1 time 0
+ Sort Area is neural_net_top__GCB1 out_reg_9 : 0 0 : 953 953 : Used 1 time 0
+ Sort Area is neural_net_top__GCB1 out_reg_a : 0 0 : 953 953 : Used 1 time 0
+ Sort Area is neural_net_top__GCB1 out_reg_b : 0 0 : 953 953 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|neuron      | (P+A*B)'    | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 16     | 8      | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:48 ; elapsed = 00:03:11 . Memory (MB): peak = 2609.254 ; gain = 2042.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:03:06 ; elapsed = 00:03:30 . Memory (MB): peak = 2609.254 ; gain = 2042.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:03:23 ; elapsed = 00:03:50 . Memory (MB): peak = 2609.254 ; gain = 2042.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:24 ; elapsed = 00:03:50 . Memory (MB): peak = 2609.254 ; gain = 2042.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:28 ; elapsed = 00:03:55 . Memory (MB): peak = 2609.254 ; gain = 2042.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:29 ; elapsed = 00:03:57 . Memory (MB): peak = 2609.254 ; gain = 2042.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:30 ; elapsed = 00:03:58 . Memory (MB): peak = 2609.254 ; gain = 2042.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:30 ; elapsed = 00:03:58 . Memory (MB): peak = 2609.254 ; gain = 2042.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 8      | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|neuron      | (P+A*B)'    | 30     | 18     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 1    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY8  |   527|
+|3     |DSP48E2 |    42|
+|4     |LUT1    |   185|
+|5     |LUT2    |  1988|
+|6     |LUT3    |  1996|
+|7     |LUT4    |   271|
+|8     |LUT5    |   299|
+|9     |LUT6    | 20154|
+|10    |MUXF7   |  9056|
+|11    |MUXF8   |  4096|
+|12    |FDRE    |  3141|
+|13    |FDSE    |    16|
+|14    |IBUF    |  6275|
+|15    |OBUF    |     9|
++------+--------+------+
+
+Report Instance Areas: 
++------+-----------------------------+----------------------------+------+
+|      |Instance                     |Module                      |Cells |
++------+-----------------------------+----------------------------+------+
+|1     |top                          |                            | 48056|
+|2     |  AvgPoolingLayer            |avg_pooling_layer           | 31392|
+|3     |    AvgPooling               |avg_pooling                 |  6053|
+|4     |  layer2                     |dense_layer1                |  8360|
+|5     |    dense_layer1             |dense_layer                 |  8296|
+|6     |      \dense_neuron[0]       |neuron                      |   192|
+|7     |      \dense_neuron[10]      |neuron_50                   |   191|
+|8     |      \dense_neuron[11]      |neuron_51                   |   511|
+|9     |      \dense_neuron[12]      |neuron_52                   |   197|
+|10    |      \dense_neuron[13]      |neuron_53                   |   189|
+|11    |      \dense_neuron[14]      |neuron_54                   |   208|
+|12    |      \dense_neuron[15]      |neuron_55                   |   342|
+|13    |      \dense_neuron[16]      |neuron_56                   |   183|
+|14    |      \dense_neuron[17]      |neuron_57                   |   191|
+|15    |      \dense_neuron[18]      |neuron_58                   |   192|
+|16    |      \dense_neuron[19]      |neuron_59                   |   503|
+|17    |      \dense_neuron[1]       |neuron_60                   |   201|
+|18    |      \dense_neuron[20]      |neuron_61                   |   186|
+|19    |      \dense_neuron[21]      |neuron_62                   |   206|
+|20    |      \dense_neuron[22]      |neuron_63                   |   196|
+|21    |      \dense_neuron[23]      |neuron_64                   |   353|
+|22    |      \dense_neuron[24]      |neuron_65                   |   204|
+|23    |      \dense_neuron[25]      |neuron_66                   |   184|
+|24    |      \dense_neuron[26]      |neuron_67                   |   187|
+|25    |      \dense_neuron[27]      |neuron_68                   |   668|
+|26    |      \dense_neuron[28]      |neuron_69                   |   197|
+|27    |      \dense_neuron[29]      |neuron_70                   |   201|
+|28    |      \dense_neuron[2]       |neuron_71                   |   207|
+|29    |      \dense_neuron[30]      |neuron_72                   |   192|
+|30    |      \dense_neuron[31]      |neuron_73                   |   366|
+|31    |      \dense_neuron[3]       |neuron_74                   |   510|
+|32    |      \dense_neuron[4]       |neuron_75                   |   194|
+|33    |      \dense_neuron[5]       |neuron_76                   |   209|
+|34    |      \dense_neuron[6]       |neuron_77                   |   193|
+|35    |      \dense_neuron[7]       |neuron_78                   |   360|
+|36    |      \dense_neuron[8]       |neuron_79                   |   185|
+|37    |      \dense_neuron[9]       |neuron_80                   |   197|
+|38    |    \relu_gen[0].relu_inst   |relu_18                     |     2|
+|39    |    \relu_gen[10].relu_inst  |relu_19                     |     2|
+|40    |    \relu_gen[11].relu_inst  |relu_20                     |     2|
+|41    |    \relu_gen[12].relu_inst  |relu_21                     |     2|
+|42    |    \relu_gen[13].relu_inst  |relu_22                     |     2|
+|43    |    \relu_gen[14].relu_inst  |relu_23                     |     2|
+|44    |    \relu_gen[15].relu_inst  |relu_24                     |     2|
+|45    |    \relu_gen[16].relu_inst  |relu_25                     |     2|
+|46    |    \relu_gen[17].relu_inst  |relu_26                     |     2|
+|47    |    \relu_gen[18].relu_inst  |relu_27                     |     2|
+|48    |    \relu_gen[19].relu_inst  |relu_28                     |     2|
+|49    |    \relu_gen[1].relu_inst   |relu_29                     |     2|
+|50    |    \relu_gen[20].relu_inst  |relu_30                     |     2|
+|51    |    \relu_gen[21].relu_inst  |relu_31                     |     2|
+|52    |    \relu_gen[22].relu_inst  |relu_32                     |     2|
+|53    |    \relu_gen[23].relu_inst  |relu_33                     |     2|
+|54    |    \relu_gen[24].relu_inst  |relu_34                     |     2|
+|55    |    \relu_gen[25].relu_inst  |relu_35                     |     2|
+|56    |    \relu_gen[26].relu_inst  |relu_36                     |     2|
+|57    |    \relu_gen[27].relu_inst  |relu_37                     |     2|
+|58    |    \relu_gen[28].relu_inst  |relu_38                     |     2|
+|59    |    \relu_gen[29].relu_inst  |relu_39                     |     2|
+|60    |    \relu_gen[2].relu_inst   |relu_40                     |     2|
+|61    |    \relu_gen[30].relu_inst  |relu_41                     |     2|
+|62    |    \relu_gen[31].relu_inst  |relu_42                     |     2|
+|63    |    \relu_gen[3].relu_inst   |relu_43                     |     2|
+|64    |    \relu_gen[4].relu_inst   |relu_44                     |     2|
+|65    |    \relu_gen[5].relu_inst   |relu_45                     |     2|
+|66    |    \relu_gen[6].relu_inst   |relu_46                     |     2|
+|67    |    \relu_gen[7].relu_inst   |relu_47                     |     2|
+|68    |    \relu_gen[8].relu_inst   |relu_48                     |     2|
+|69    |    \relu_gen[9].relu_inst   |relu_49                     |     2|
+|70    |  layer3                     |dense_layer2                |  1998|
+|71    |    dense_layer2             |dense_layer__parameterized0 |  1978|
+|72    |      \dense_neuron[0]       |neuron__parameterized0      |   229|
+|73    |      \dense_neuron[1]       |neuron__parameterized0_9    |   171|
+|74    |      \dense_neuron[2]       |neuron__parameterized0_10   |   213|
+|75    |      \dense_neuron[3]       |neuron__parameterized0_11   |   194|
+|76    |      \dense_neuron[4]       |neuron__parameterized0_12   |   206|
+|77    |      \dense_neuron[5]       |neuron__parameterized0_13   |   209|
+|78    |      \dense_neuron[6]       |neuron__parameterized0_14   |   218|
+|79    |      \dense_neuron[7]       |neuron__parameterized0_15   |   189|
+|80    |      \dense_neuron[8]       |neuron__parameterized0_16   |   184|
+|81    |      \dense_neuron[9]       |neuron__parameterized0_17   |   162|
+|82    |    \relu_gen[0].relu_inst   |relu                        |     2|
+|83    |    \relu_gen[1].relu_inst   |relu_0                      |     2|
+|84    |    \relu_gen[2].relu_inst   |relu_1                      |     2|
+|85    |    \relu_gen[3].relu_inst   |relu_2                      |     2|
+|86    |    \relu_gen[4].relu_inst   |relu_3                      |     2|
+|87    |    \relu_gen[5].relu_inst   |relu_4                      |     2|
+|88    |    \relu_gen[6].relu_inst   |relu_5                      |     2|
+|89    |    \relu_gen[7].relu_inst   |relu_6                      |     2|
+|90    |    \relu_gen[8].relu_inst   |relu_7                      |     2|
+|91    |    \relu_gen[9].relu_inst   |relu_8                      |     2|
+|92    |  maxLayer                   |select_max                  |    17|
++------+-----------------------------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:31 ; elapsed = 00:03:58 . Memory (MB): peak = 2609.254 ; gain = 2042.047
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:31 ; elapsed = 00:03:58 . Memory (MB): peak = 2609.254 ; gain = 2042.047
+Synthesis Optimization Complete : Time (s): cpu = 00:03:31 ; elapsed = 00:03:58 . Memory (MB): peak = 2609.254 ; gain = 2042.047
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2609.254 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 19997 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 8 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.110 . Memory (MB): peak = 2609.254 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 6318 instances were transformed.
+  BUFG => BUFGCE: 1 instance 
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 42 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 6275 instances
+
+Synth Design complete | Checksum: e26d2a8
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:04:20 ; elapsed = 00:05:00 . Memory (MB): peak = 2609.254 ; gain = 2066.922
+Write ShapeDB Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.914 . Memory (MB): peak = 2609.254 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.runs/synth_1/neural_net_top.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:09 . Memory (MB): peak = 2609.254 ; gain = 0.000
+INFO: [Vivado 12-24828] Executing command : report_utilization -file neural_net_top_utilization_synth.rpt -pb neural_net_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  9 15:12:17 2026...

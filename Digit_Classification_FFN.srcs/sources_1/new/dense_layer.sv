@@ -28,7 +28,7 @@ module dense_layer #(parameter NEURON_NB = 32, IN_SIZE = 196, WIDTH = 8)(
     input signed [WIDTH-1:0] weights[0:NEURON_NB-1][0:IN_SIZE-1], //3d memory array of weight vectors for all neurons ( 32 neurons x  196 weights x 8 bits )
     input signed [WIDTH-1:0] biases[0:NEURON_NB-1],
     output signed [4*WIDTH-1:0] neuron_out[0:NEURON_NB-1],
-    output layer_done   
+    output layer_done
     );
 
     reg [0:NEURON_NB-1] neuron_done;

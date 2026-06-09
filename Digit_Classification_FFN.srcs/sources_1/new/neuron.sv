@@ -37,7 +37,8 @@ module neuron #(parameter IN_SIZE = 196, WIDTH = 8)(
     wire signed [4*WIDTH-1:0] product_w;
     reg signed [4*WIDTH-1:0] out;
 
-    assign product_w = in_data[addr] * weight[addr];
+    assign product_w = {{(2*WIDTH){in_data[addr][2*WIDTH-1]}}, in_data[addr][2*WIDTH-1:0]} *  //replicating the MSB of in_data[addr] to make the *SIGNED* number 32 bit wide 
+                        {{(3*WIDTH){weight[addr][WIDTH-1]}}, weight[addr][WIDTH-1:0]};        //replicating the MSB of weight[addr] to make the *SIGNED* number 32 bit wide
 
     always @(posedge clk) begin
         if(reset) begin
@@ -45,19 +46,20 @@ module neuron #(parameter IN_SIZE = 196, WIDTH = 8)(
             done <= 1'b0;
             out <= 0;
         end
-        else if(en) begin
-            if(addr < IN_SIZE) begin
+        else if(en && !done) begin
+            if(addr < IN_SIZE - 1) begin
                 out <= out + product_w;
                 addr <= addr + 1;
                 done <= 1'b0;
             end
-            else if(addr == IN_SIZE) begin
+            else if(addr == IN_SIZE - 1) begin
+                out  <= out + product_w;
                 done <= 1'b1;
             end
         end
     end
 
-    assign neuron_out = out + bias;
+    assign neuron_out = (done) ? (out + bias) : 0 ;
     assign neuron_done = done;
 
 endmodule

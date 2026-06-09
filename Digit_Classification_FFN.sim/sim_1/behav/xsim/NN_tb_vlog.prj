@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "C:/AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../Digit_Classification_FFN.srcs/sources_1/new/avg_pooling.sv" \
+"../../../../Digit_Classification_FFN.srcs/sources_1/new/avg_pooling_layer.sv" \
+"../../../../Digit_Classification_FFN.srcs/sources_1/new/dense_layer.sv" \
+"../../../../Digit_Classification_FFN.srcs/sources_1/new/dense_layer1.sv" \
+"../../../../Digit_Classification_FFN.srcs/sources_1/new/dense_layer2.sv" \
+"../../../../Digit_Classification_FFN.srcs/sources_1/new/neural_net_top.sv" \
+"../../../../Digit_Classification_FFN.srcs/sources_1/new/neuron.sv" \
+"../../../../Digit_Classification_FFN.srcs/sources_1/new/relu.sv" \
+"../../../../Digit_Classification_FFN.srcs/sources_1/new/select_max.sv" \
+"../../../../Digit_Classification_FFN.srcs/sim_1/new/NN_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

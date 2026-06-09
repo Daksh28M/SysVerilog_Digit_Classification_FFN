@@ -24,13 +24,15 @@ module avg_pooling_layer(
     input clk,
     input enable,
     input reset,
-    input [7:0] img[0:783]    //flattened 28x28 8-bit grayscale image vector
+    input [7:0] img[0:783],    //flattened 28x28 8-bit grayscale image vector
+    output reg signed [15:0] pool [0:195],
+    output reg pool_en
     );
 
-    reg pool_en;
+    // reg pool_en;
     
     wire finished_pool;
-    reg signed [15:0] pool [0:195];
+    // reg signed [15:0] pool [0:195];
 
     wire signed [7:0] pool_in1;
     wire signed [7:0] pool_in2;
@@ -83,7 +85,7 @@ module avg_pooling_layer(
         end
         else if(enable) begin
             if(finished_pool) begin
-                pool[pool_final_addr] = pool_final;
+                pool [pool_final_addr] = {8'b0, pool_final};
                 pool_addr = pool_addr + 2;
                 pool_row = pool_row +2;
                 if(pool_row == 28) begin
@@ -103,5 +105,5 @@ module avg_pooling_layer(
             end
         end
     end
-    
+
 endmodule
