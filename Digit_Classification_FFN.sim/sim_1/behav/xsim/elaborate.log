@@ -6,20 +6,4 @@ Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.avg_pooling
-Compiling module xil_defaultlib.avg_pooling_layer
-Compiling module xil_defaultlib.neuron
-Compiling module xil_defaultlib.dense_layer_default
-Compiling module xil_defaultlib.relu
-Compiling module xil_defaultlib.dense_layer1_default
-Compiling module xil_defaultlib.neuron(IN_SIZE=32)
-Compiling module xil_defaultlib.dense_layer(NEURON_NB=10,IN_SIZE...
-Compiling module xil_defaultlib.dense_layer2_default
-Compiling module xil_defaultlib.select_max
-Compiling module xil_defaultlib.neural_net_top
-Compiling module xil_defaultlib.NN_tb
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot NN_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

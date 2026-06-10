@@ -57,6 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param general.usePosixSpawnForFork 1
+set_param chipscope.maxJobs 8
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xczu5eg-sfvc784-1-e
 
@@ -94,6 +95,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/utils_1/imports/synth_1/neural_net_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
