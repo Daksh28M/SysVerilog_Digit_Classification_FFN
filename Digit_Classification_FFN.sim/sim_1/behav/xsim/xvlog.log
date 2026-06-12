@@ -18,4 +18,3 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/VerilogProjects/Digit_Clas
 INFO: [VRFC 10-311] analyzing module select_max
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sim_1/new/NN_tb.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module NN_tb
-WARNING: [VRFC 10-3380] identifier 'i' is used before its declaration [E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sim_1/new/NN_tb.sv:94]
