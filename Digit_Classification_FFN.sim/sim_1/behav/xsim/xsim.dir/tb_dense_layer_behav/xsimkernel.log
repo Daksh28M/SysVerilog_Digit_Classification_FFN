@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_dense_layer_behav/xsimk.exe -simmode gui -wdb tb_dense_layer_behav.wdb -simrunnum 0 -socket 51735
+Design successfully loaded
+Design Loading Memory Usage: 11144 KB (Peak: 11144 KB)
+Design Loading CPU Usage: 0 ms

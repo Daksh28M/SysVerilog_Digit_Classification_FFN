@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Sat Jul 18 12:58:44 2026
+# Process ID         : 18764
+# Current directory  : E:/VerilogProjects/Digit_Classification_FFN
+# Command line       : vivado.exe -gui_launcher_event rodinguilauncherevent36092 E:\VerilogProjects\Digit_Classification_FFN\Digit_Classification_FFN.xpr
+# Log file           : E:/VerilogProjects/Digit_Classification_FFN/vivado.log
+# Journal file       : E:/VerilogProjects/Digit_Classification_FFN\vivado.jou
+# Running On         : Daksh
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 33959 MB
+# Swap memory        : 5368 MB
+# Total Virtual      : 39328 MB
+# Available Virtual  : 14358 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config E:/VerilogProjects/Digit_Classification_FFN/NN_tb_behav.wcfg
+source NN_tb.tcl
+run 10 s
+close_sim

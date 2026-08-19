@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "C:/AMDDesignTools/2025.2/Vivado/data/rsb/busdef" \
+"../../../../Digit_Classification_FFN.srcs/sources_1/new/dense_layer.sv" \
+"../../../../Digit_Classification_FFN.srcs/sources_1/new/neuron.sv" \
+"../../../../Digit_Classification_FFN.srcs/sim_1/new/tb_dense_layer.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
