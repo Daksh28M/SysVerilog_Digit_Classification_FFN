@@ -3,55 +3,46 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="tb_dense_layer_behav.wdb" id="1">
+      <db_ref path="tb_select_max_behav.wdb" id="1">
          <top_modules>
             <top_module name="glbl" />
-            <top_module name="tb_dense_layer" />
+            <top_module name="tb_select_max" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.700 ns"></ZoomStartTime>
-      <ZoomEndTime time="88.001 ns"></ZoomEndTime>
-      <Cursor1Time time="35.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="87.901 ns"></ZoomEndTime>
+      <Cursor1Time time="85.540 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="258"></NameColumnWidth>
-      <ValueColumnWidth column_width="125"></ValueColumnWidth>
+      <ValueColumnWidth column_width="119"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
-   <wvobject fp_name="/tb_dense_layer/clk" type="logic">
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/tb_select_max/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dense_layer/reset" type="logic">
+   <wvobject fp_name="/tb_select_max/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_select_max/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dense_layer/layer_en" type="logic">
-      <obj_property name="ElementShortName">layer_en</obj_property>
-      <obj_property name="ObjectShortName">layer_en</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dense_layer/neuron_out" type="array">
-      <obj_property name="ElementShortName">neuron_out[0:2][31:0]</obj_property>
-      <obj_property name="ObjectShortName">neuron_out[0:2][31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dense_layer/biases" type="array">
-      <obj_property name="ElementShortName">biases[0:2][7:0]</obj_property>
-      <obj_property name="ObjectShortName">biases[0:2][7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dense_layer/weights" type="array">
-      <obj_property name="ElementShortName">weights[0:2][0:3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">weights[0:2][0:3][7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_dense_layer/in_data" type="array">
+   <wvobject fp_name="/tb_select_max/in_data" type="array">
       <obj_property name="ElementShortName">in_data[0:3][15:0]</obj_property>
       <obj_property name="ObjectShortName">in_data[0:3][15:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_dense_layer/layer_done" type="logic">
+   <wvobject fp_name="/tb_select_max/digit" type="array">
+      <obj_property name="ElementShortName">digit[7:0]</obj_property>
+      <obj_property name="ObjectShortName">digit[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_select_max/layer_done" type="logic">
       <obj_property name="ElementShortName">layer_done</obj_property>
       <obj_property name="ObjectShortName">layer_done</obj_property>
    </wvobject>

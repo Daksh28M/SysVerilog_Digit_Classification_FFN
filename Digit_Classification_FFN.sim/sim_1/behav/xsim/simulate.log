@@ -1,11 +1,6 @@
 Time resolution is 1 ps
-PASS: negative value clamps to zero | input=-1, output=0
-PASS: zero remains zero | input=0, output=0
-PASS: 63 shifted by 6 becomes zero | input=63, output=0
-PASS: 64 shifted by 6 becomes one | input=64, output=1
-PASS: 65 truncates to one | input=65, output=1
-PASS: largest non-saturated output | input=2097151, output=32767
-PASS: first saturated output | input=2097152, output=32767
-PASS: maximum positive accumulator saturates | input=2147483647, output=32767
-PASS: all ReLU tests completed.
-$finish called at time : 8 ns : File "E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sim_1/new/tb_relu.sv" Line 79
+PASS: normal maximum | selected digit=1
+PASS: tie selects highest index | selected digit=2
+PASS: all-negative signed comparison | selected digit=3
+PASS: all select_max tests completed.
+$finish called at time : 86 ns : File "E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/sim_1/new/tb_select_max.sv" Line 107
