@@ -3,47 +3,89 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="tb_select_max_behav.wdb" id="1">
+      <db_ref path="NN_tb_behav.wdb" id="1">
          <top_modules>
+            <top_module name="NN_tb" />
             <top_module name="glbl" />
-            <top_module name="tb_select_max" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="87.901 ns"></ZoomEndTime>
-      <Cursor1Time time="85.540 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="88.500001 us"></ZoomEndTime>
+      <Cursor1Time time="50.200000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="258"></NameColumnWidth>
-      <ValueColumnWidth column_width="119"></ValueColumnWidth>
+      <ValueColumnWidth column_width="113"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
-   <wvobject fp_name="/tb_select_max/clk" type="logic">
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/NN_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_select_max/enable" type="logic">
-      <obj_property name="ElementShortName">enable</obj_property>
-      <obj_property name="ObjectShortName">enable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_select_max/reset" type="logic">
+   <wvobject fp_name="/NN_tb/reset" type="logic">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_select_max/in_data" type="array">
-      <obj_property name="ElementShortName">in_data[0:3][15:0]</obj_property>
-      <obj_property name="ObjectShortName">in_data[0:3][15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/NN_tb/enable" type="logic">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_select_max/digit" type="array">
-      <obj_property name="ElementShortName">digit[7:0]</obj_property>
-      <obj_property name="ObjectShortName">digit[7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/NN_tb/NN/pool_enable" type="logic">
+      <obj_property name="ElementShortName">pool_enable</obj_property>
+      <obj_property name="ObjectShortName">pool_enable</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_select_max/layer_done" type="logic">
+   <wvobject fp_name="/NN_tb/img" type="array">
+      <obj_property name="ElementShortName">img[0:783][7:0]</obj_property>
+      <obj_property name="ObjectShortName">img[0:783][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NN_tb/NN/layer2/dense1_en" type="logic">
+      <obj_property name="ElementShortName">dense1_en</obj_property>
+      <obj_property name="ObjectShortName">dense1_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NN_tb/NN/layer2/dense1_done" type="logic">
+      <obj_property name="ElementShortName">dense1_done</obj_property>
+      <obj_property name="ObjectShortName">dense1_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NN_tb/NN/layer2/layer_done" type="logic">
       <obj_property name="ElementShortName">layer_done</obj_property>
       <obj_property name="ObjectShortName">layer_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NN_tb/NN/layer2/relu_result" type="array">
+      <obj_property name="ElementShortName">relu_result[0:31][15:0]</obj_property>
+      <obj_property name="ObjectShortName">relu_result[0:31][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NN_tb/NN/layer3/dense2_en" type="logic">
+      <obj_property name="ElementShortName">dense2_en</obj_property>
+      <obj_property name="ObjectShortName">dense2_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NN_tb/NN/layer3/dense2_done" type="logic">
+      <obj_property name="ElementShortName">dense2_done</obj_property>
+      <obj_property name="ObjectShortName">dense2_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NN_tb/NN/layer3/layer_done" type="logic">
+      <obj_property name="ElementShortName">layer_done</obj_property>
+      <obj_property name="ObjectShortName">layer_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NN_tb/NN/layer3/relu_result" type="array">
+      <obj_property name="ElementShortName">relu_result[0:9][15:0]</obj_property>
+      <obj_property name="ObjectShortName">relu_result[0:9][15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NN_tb/NN/maxLayer/digit" type="array">
+      <obj_property name="ElementShortName">digit[7:0]</obj_property>
+      <obj_property name="ObjectShortName">digit[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NN_tb/NN/nn_done" type="logic">
+      <obj_property name="ElementShortName">nn_done</obj_property>
+      <obj_property name="ObjectShortName">nn_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NN_tb/NN/maxLayer/layer_done" type="logic">
+      <obj_property name="ElementShortName">layer_done</obj_property>
+      <obj_property name="ObjectShortName">layer_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NN_tb/NN/digit_out" type="array">
+      <obj_property name="ElementShortName">digit_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">digit_out[7:0]</obj_property>
    </wvobject>
 </wave_config>
