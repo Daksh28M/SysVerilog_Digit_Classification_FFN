@@ -1,0 +1,4 @@
+Running: xsim.dir/tb_nn_mnist_batch_behav/xsimk.exe -simmode gui -wdb tb_nn_mnist_batch_behav.wdb -simrunnum 0 -socket 60944
+Design successfully loaded
+Design Loading Memory Usage: 11496 KB (Peak: 11496 KB)
+Design Loading CPU Usage: 0 ms

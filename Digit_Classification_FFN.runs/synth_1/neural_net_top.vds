@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Aug 20 22:48:37 2026
+# Process ID         : 20796
+# Current directory  : E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.runs/synth_1
+# Command line       : vivado.exe -log neural_net_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source neural_net_top.tcl
+# Log file           : E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.runs/synth_1/neural_net_top.vds
+# Journal file       : E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.runs/synth_1\vivado.jou
+# Running On         : Daksh
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : 13th Gen Intel(R) Core(TM) i9-13980HX
+# CPU Frequency      : 2419 MHz
+# CPU Physical cores : 24
+# CPU Logical cores  : 32
+# Host memory        : 25369 MB
+# Swap memory        : 25369 MB
+# Total Virtual      : 50739 MB
+# Available Virtual  : 11212 MB
+#-----------------------------------------------------------
+source neural_net_top.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 542.828 ; gain = 221.754
+Command: read_checkpoint -auto_incremental -incremental E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/utils_1/imports/synth_1/neural_net_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/VerilogProjects/Digit_Classification_FFN/Digit_Classification_FFN.srcs/utils_1/imports/synth_1/neural_net_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top neural_net_top -part xczu5eg-sfvc784-1-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu5eg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu5eg'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 36472
