@@ -2,3 +2,6 @@ Running: xsim.dir/tb_dense_layer_behav/xsimk.exe -simmode gui -wdb tb_dense_laye
 Design successfully loaded
 Design Loading Memory Usage: 11144 KB (Peak: 11144 KB)
 Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 12820 KB (Peak: 12820 KB)
+Simulation CPU Usage: 124 ms
